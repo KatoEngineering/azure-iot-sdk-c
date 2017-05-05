@@ -111,6 +111,7 @@ else()
             iothub_client_mqtt_transport
             iothub_service_client
             aziotsharedutil
+            iothub_client_mqtt_transport
             iothub_client_mqtt_ws_transport
         )
         linkMqttLibrary(${theseTestsName}_exe)

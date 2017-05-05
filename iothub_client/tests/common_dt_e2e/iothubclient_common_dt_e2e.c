@@ -406,13 +406,9 @@ void dt_e2e_get_complete_desired_test(IOTHUB_CLIENT_TRANSPORT_PROVIDER protocol,
     {
         deviceToUse = IoTHubAccount_GetX509Device(iothubAcctInfo);
     }
-    else if (accountAuthMethod == IOTHUB_ACCOUNT_AUTH_CONNSTRING)
-    {
-        deviceToUse = IoTHubAccount_GetSASDevice(iothubAcctInfo);
-    }
     else
     {
-        ASSERT_FAIL("invalid accountAuthMethod passed");
+        deviceToUse = IoTHubAccount_GetSASDevice(iothubAcctInfo);
     }
 
     DEVICE_DESIRED_DATA *device = device_desired_init();
